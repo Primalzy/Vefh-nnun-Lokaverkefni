@@ -1,0 +1,242 @@
+.CSbc{
+    background-image: linear-gradient(to bottom, yellow, Black);
+    color: rgb(246, 226, 218);
+    padding: 1em;
+}
+
+.Valbc{
+    background-image: linear-gradient(to bottom, black, red);
+    color: rgb(246, 226, 218);
+    padding: 1em;
+}
+
+.FNbc{
+    background-image: linear-gradient(to bottom, red, Blue);
+    color: rgb(246, 226, 218);
+    padding: 1em;
+}
+
+.container-1{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.Vis{
+    display: none;
+}
+
+.fontsize{
+    font-size: 500%;
+    padding-left: 40%;
+}
+
+.fontsizes{
+    font-size: 300%;
+}
+
+.font{
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;;
+}
+
+.textcolor{
+    color: rgb(217, 110, 128);
+}
+
+#toggles:checked ~ .chatboxes{
+    top: 50px;
+    transition: all 1s ease;
+}
+
+#toggles{
+    display: none;
+}
+
+.chatboxes{
+    position: fixed;
+    top: -400px;
+    right: 50px;
+
+    padding: 1em;
+    max-width: 25%;
+    transition: all 1s ease;
+}
+
+.lblb{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    display: block;
+    z-index: 100;
+}
+
+#toggle{
+    display: none;
+}
+
+.lbl{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+    z-index: 100;
+}
+
+#toggle:checked ~ .chatbox{
+    bottom: 50px;
+    transition: all 1s ease;
+}
+
+.chatbox{
+    position: fixed;
+    bottom: -1100px;
+    right: 50px;
+
+    padding: 1em;
+    max-width: 25%;
+    transition: all 1s ease;
+
+    background-color:cornflowerblue;
+}
+
+.Border{
+    border-radius: 5px;
+    border: 2px;
+    border-style: dashed;
+    border-color: Black;
+    padding: 10px;
+}
+
+@media screen and (max-width:650px) {
+    #toggle:checked ~ .chatbox{
+        bottom: -50px;
+        transition: all 1s ease;
+    }
+
+    .chatbox{
+        position: fixed;
+        bottom: -1500px;
+        right: 50px;
+    
+        padding: 1em;
+        max-width: 75%;
+        transition: all 1s ease;
+    
+        background-color:cornflowerblue;
+    }
+
+    thead{
+        display: none;
+    }
+
+    td{
+        display: block;
+        text-align: right;
+    }
+
+    tbody td::before{
+        content: attr(data-label);
+        float: left;
+        font-weight: bolder;
+    }
+
+    input{
+        display: block;
+    }
+}
+
+@media screen and (min-width:650px) {
+    .container-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    .container2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .Vis{
+        display: grid;
+        font-size: 500%;
+    }
+
+    .fontsize{
+        font-size: 500%;
+        padding-left: auto;
+    }
+
+    .lblb{
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        display: none;
+        z-index: 100;
+    }
+}
+
+.kvikun{
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes logo {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.CS{
+    animation-name: CS;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes CS {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.Valorant{
+    animation-name: Valo;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes Valo {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.Fortnite{
+    animation-name: FN;
+    animation-duration: 9s;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes FN {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+html{
+    scroll-behavior: smooth;
+}
